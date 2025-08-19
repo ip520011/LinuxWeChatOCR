@@ -12,6 +12,6 @@
 
 本项目基于原项目 https://github.com/blueveryday/WeChatOCR ，改动如下：
 
-1. 根据linux替换ocr相关依赖。
+1. 替换 ocr 相关依赖为 linux，作者测试 debian12 平台完全支持。
 2. 功能与原作者项目保持高度一致。
 
