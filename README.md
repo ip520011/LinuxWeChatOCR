@@ -1,12 +1,8 @@
 # LinuxWeChatOCR
 
-这是一个linux平台采用Python调用微信OCR功能，进行批处理图片OCR的代码。
+这是一个linux平台采用Python调用微信OCR功能，进行批处理图片OCR的代码, 基于 blueveryday 的 WeChatOCR 项目改造而来。
 
-基于 blueveryday 的 WeChatOCR 项目改造而来。
-
-首先非常感谢blueveryday的WeChatOCR项目，非常感谢。
-
-其次感谢swigger，52PJ的FeiyuYip，nulptr以及其他对此做出贡献的朋友。
+首先非常感谢blueveryday, swigger 以及其他对此做出贡献的朋友
 
 原项目功能：
 
