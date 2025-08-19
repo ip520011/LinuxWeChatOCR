@@ -18,7 +18,7 @@ def find_wechat_path():
 
 def find_wechatocr_exe():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    wechatocr_path = os.path.join(script_dir, 'path', 'wxocr')
+    wechatocr_path = os.path.join(script_dir, 'wechat', 'wxocr')
     if os.path.isfile(wechatocr_path):
         return wechatocr_path
     else:
