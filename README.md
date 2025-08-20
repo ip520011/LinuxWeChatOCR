@@ -12,6 +12,29 @@
 
 本项目基于原项目 https://github.com/blueveryday/WeChatOCR ，改动如下：
 
-1. 替换 ocr 相关依赖为 linux，作者测试 debian12 平台完全支持。
-2. 功能与原作者项目保持高度一致。
+1. 替换 ocr 原 win 依赖为 linux 依赖，作者测试 debian12 平台完全支持。
+2. debian11 系统默认 Python 3.9.2，debian12 系统默认 Python 3.11.2。
+3. 功能与原作者项目保持高度一致。
+
+问题1:
+
+```shell
+root@shiny-intention:~/tgMonitor# python3 ocr.py 
+Traceback (most recent call last):
+  File "/root/tgMonitor/ocr.py", line 10, in <module>
+    import wcocr
+ImportError: libpython3.11.so.1.0: cannot open shared object file: No such file or directory
+```
+
+解决办法：
+
+```shell
+sudo apt update
+sudo apt install python3.11 python3.11-dev
+
+...
+
+root@shiny-intention:~/tgMonitor# find /usr/lib /usr/local/lib -name "libpython3.11.so.1.0"
+显示 /usr/lib/x86_64-linux-gnu/libpython3.11.so.1.0 为成功
+```
 
