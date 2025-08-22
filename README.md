@@ -12,7 +12,7 @@
 
 本项目基于原项目 https://github.com/blueveryday/WeChatOCR ，改动如下：
 
-1. 替换 ocr 原 win 依赖为 linux 依赖，作者测试 debian12 平台完全支持。
+1. 替换 ocr 原 win 依赖为 linux 依赖，作者测试 debian11、debian12 平台完全支持。
 2. debian11 系统默认 Python 3.9.2，debian12 系统默认 Python 3.11.2。
 3. 功能与原作者项目保持高度一致。
 
