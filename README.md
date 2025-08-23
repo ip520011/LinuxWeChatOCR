@@ -26,20 +26,25 @@ Traceback (most recent call last):
 ImportError: libpython3.11.so.1.0: cannot open shared object file: No such file or directory
 ```
 
+这个错误表明 OpenCV (cv2) 缺少一个关键的系统依赖库 libGL.so.1。
+
+这是在 Linux 系统上运行图形处理库时常见的问题。
+
 解决办法：
 
 ```shell
-这个错误表明 OpenCV (cv2) 缺少一个关键的系统依赖库 libGL.so.1。
-这是在 Linux 系统上运行图形处理库时常见的问题。
-
 apt update
 apt install -y libgl1-mesa-glx libglib2.0-0
+```
 
-...
+验证修复结果:
+
+```shell
+root@hkg14-202412061847277bf8ce:~# python3 -c "import cv2; print('OpenCV version:', cv2.__version__)"
+OpenCV version: 4.12.0
+
+或者
 
 root@hkg14-202412061847277bf8ce:~/AkileMonitor# find /usr/lib /usr/local/lib -name "libpython3.11.so.1.0"
 /usr/lib/x86_64-linux-gnu/libpython3.11.so.1.0
-
-显示 /usr/lib/x86_64-linux-gnu/libpython3.11.so.1.0 为成功
 ```
-
